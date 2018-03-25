@@ -50,9 +50,14 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
     return false;
   }
-  submitButton.setAttribute("disabled", "");
-  event.preventDefault();
-
+  if (textoArea.value.split(" ").length > 150) {
+    alert("El mensaje no puede contener más de 150 palabras");
+    textoArea.focus();
+    event.preventDefault();
+    return false;
+    submitButton.setAttribute("disabled", "");
+    event.preventDefault();
+  }
   setTimeout(function () {
     form.reset();
     sendNotification("Formulario recibido", "Gracias por participar");
