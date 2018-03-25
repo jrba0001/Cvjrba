@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV José Bonilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tasks.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="./js/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__item navbar__item--active">
+                <a href="./index.html">Portada</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="./tareas.html">Tareas</a>
+            </li>
+        </ul>
+    </nav>
+    </head>
+
+    <body>
+        <main class="container">
+            <section class="section-content row">
+                <h2>Lista de tareas</h2>
+                <div class="col-6">
+                    <h3>Añadir nueva tarea</h3>
+                    <form>
+                        <input type="text" id="newTaskName" name="name" placeholder="Nueva tarea..." required>
+                        <br>
+                        <br>
+                        <button id="sendNewTask">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="col-6">
+                    <h3>Tareas pendientes</h3>
+
+                    <div class="loader"></div>
+                    <div>
+                        <ul id="tasksContainer"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Jose Bonilla, agradecimientos a Sergio Fernández 2018
+        </footer>
+    </body>
+    <script src="./js/notifications.js"></script>
+    <script src="./js/tasks.js"></script>
+
+</html>
